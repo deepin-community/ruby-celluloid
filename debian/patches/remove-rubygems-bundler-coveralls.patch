@@ -1,0 +1,24 @@
+Description: we don't need rubygems, bundler or coveralls
+ dependencies are added to debian/control and tracked by apt.
+ code coverage is of not interest of us.
+Author: Praveen Arimbrathodiyil <praveen@debian.org>
+Last-updated: 2013-05-18
+
+Index: ruby-celluloid/spec/spec_helper.rb
+===================================================================
+--- ruby-celluloid.orig/spec/spec_helper.rb
++++ ruby-celluloid/spec/spec_helper.rb
+@@ -1,8 +1,8 @@
+-require 'coveralls'
+-Coveralls.wear!
+-
+-require 'rubygems'
+-require 'bundler/setup'
++#require 'coveralls'
++#Coveralls.wear!
++#
++#require 'rubygems'
++#require 'bundler/setup'
+ require 'celluloid/rspec'
+ require 'celluloid/probe'
+ 

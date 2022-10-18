@@ -1,0 +1,18 @@
+Description: open celluloid log file in a tmp directory
+Author: Cédric Boutillier <boutil@debian.org>
+Last-Update: 2018-03-23
+Forwarded: no
+
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -5,8 +5,9 @@
+ #require 'bundler/setup'
+ require 'celluloid/rspec'
+ require 'celluloid/probe'
++require 'tmpdir'
+ 
+-logfile = File.open(File.expand_path("../../log/test.log", __FILE__), 'a')
++logfile = File.open(Dir.mktmpdir+"/celluloid.log", 'a')
+ logfile.sync = true
+ 
+ Celluloid.logger = Logger.new(logfile)

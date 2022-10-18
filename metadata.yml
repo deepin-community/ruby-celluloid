@@ -1,0 +1,218 @@
+--- !ruby/object:Gem::Specification
+name: celluloid
+version: !ruby/object:Gem::Version
+  version: 0.16.0
+platform: ruby
+authors:
+- Tony Arcieri
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2014-09-05 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: timers
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 4.0.0
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - "~>"
+      - !ruby/object:Gem::Version
+        version: 2.14.1
+- !ruby/object:Gem::Dependency
+  name: guard-rspec
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: benchmark_suite
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rubocop
+  requirement: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    requirements:
+    - - ">="
+      - !ruby/object:Gem::Version
+        version: '0'
+description: Celluloid enables people to build concurrent programs out of concurrent
+  objects just as easily as they build sequential programs out of sequential objects
+email:
+- tony.arcieri@gmail.com
+executables: []
+extensions: []
+extra_rdoc_files: []
+files:
+- LICENSE.txt
+- README.md
+- lib/celluloid.rb
+- lib/celluloid/actor.rb
+- lib/celluloid/actor_system.rb
+- lib/celluloid/autostart.rb
+- lib/celluloid/call_chain.rb
+- lib/celluloid/calls.rb
+- lib/celluloid/cell.rb
+- lib/celluloid/condition.rb
+- lib/celluloid/core_ext.rb
+- lib/celluloid/cpu_counter.rb
+- lib/celluloid/evented_mailbox.rb
+- lib/celluloid/exceptions.rb
+- lib/celluloid/fiber.rb
+- lib/celluloid/fsm.rb
+- lib/celluloid/future.rb
+- lib/celluloid/handlers.rb
+- lib/celluloid/internal_pool.rb
+- lib/celluloid/legacy.rb
+- lib/celluloid/links.rb
+- lib/celluloid/logger.rb
+- lib/celluloid/logging.rb
+- lib/celluloid/logging/incident.rb
+- lib/celluloid/logging/incident_logger.rb
+- lib/celluloid/logging/incident_reporter.rb
+- lib/celluloid/logging/log_event.rb
+- lib/celluloid/logging/ring_buffer.rb
+- lib/celluloid/mailbox.rb
+- lib/celluloid/method.rb
+- lib/celluloid/notifications.rb
+- lib/celluloid/pool_manager.rb
+- lib/celluloid/probe.rb
+- lib/celluloid/properties.rb
+- lib/celluloid/proxies/abstract_proxy.rb
+- lib/celluloid/proxies/actor_proxy.rb
+- lib/celluloid/proxies/async_proxy.rb
+- lib/celluloid/proxies/block_proxy.rb
+- lib/celluloid/proxies/cell_proxy.rb
+- lib/celluloid/proxies/future_proxy.rb
+- lib/celluloid/proxies/sync_proxy.rb
+- lib/celluloid/receivers.rb
+- lib/celluloid/registry.rb
+- lib/celluloid/responses.rb
+- lib/celluloid/rspec.rb
+- lib/celluloid/rspec/actor_examples.rb
+- lib/celluloid/rspec/example_actor_class.rb
+- lib/celluloid/rspec/mailbox_examples.rb
+- lib/celluloid/rspec/task_examples.rb
+- lib/celluloid/signals.rb
+- lib/celluloid/stack_dump.rb
+- lib/celluloid/supervision_group.rb
+- lib/celluloid/supervisor.rb
+- lib/celluloid/system_events.rb
+- lib/celluloid/task_set.rb
+- lib/celluloid/tasks.rb
+- lib/celluloid/tasks/task_fiber.rb
+- lib/celluloid/tasks/task_thread.rb
+- lib/celluloid/test.rb
+- lib/celluloid/thread.rb
+- lib/celluloid/thread_handle.rb
+- lib/celluloid/uuid.rb
+- spec/celluloid/actor_spec.rb
+- spec/celluloid/actor_system_spec.rb
+- spec/celluloid/block_spec.rb
+- spec/celluloid/calls_spec.rb
+- spec/celluloid/condition_spec.rb
+- spec/celluloid/cpu_counter_spec.rb
+- spec/celluloid/evented_mailbox_spec.rb
+- spec/celluloid/fsm_spec.rb
+- spec/celluloid/future_spec.rb
+- spec/celluloid/internal_pool_spec.rb
+- spec/celluloid/links_spec.rb
+- spec/celluloid/logging/ring_buffer_spec.rb
+- spec/celluloid/mailbox_spec.rb
+- spec/celluloid/notifications_spec.rb
+- spec/celluloid/pool_spec.rb
+- spec/celluloid/probe_spec.rb
+- spec/celluloid/properties_spec.rb
+- spec/celluloid/registry_spec.rb
+- spec/celluloid/stack_dump_spec.rb
+- spec/celluloid/supervision_group_spec.rb
+- spec/celluloid/supervisor_spec.rb
+- spec/celluloid/tasks/task_fiber_spec.rb
+- spec/celluloid/tasks/task_thread_spec.rb
+- spec/celluloid/thread_handle_spec.rb
+- spec/celluloid/timer_spec.rb
+- spec/celluloid/uuid_spec.rb
+- spec/spec_helper.rb
+homepage: https://github.com/celluloid/celluloid
+licenses:
+- MIT
+metadata: {}
+post_install_message: 
+rdoc_options: []
+require_paths:
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.9.2
+required_rubygems_version: !ruby/object:Gem::Requirement
+  requirements:
+  - - ">="
+    - !ruby/object:Gem::Version
+      version: 1.3.6
+requirements: []
+rubyforge_project: 
+rubygems_version: 2.2.2
+signing_key: 
+specification_version: 4
+summary: Actor-based concurrent object framework for Ruby
+test_files: []

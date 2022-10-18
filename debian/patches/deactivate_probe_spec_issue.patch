@@ -1,0 +1,19 @@
+Description: Deactivate randomly failing test
+ It fails about 1/3 of the time. It is a known problem upstream, and should be
+ solved in a following release (0.17.5?)
+Bug: https://github.com/celluloid/celluloid/issues/581
+Bug-Debian: https://bugs.debian.org/786669
+Author: Cédric Boutillier <boutil@debian.org>
+Last-Update: 2015-06-05
+
+--- a/spec/celluloid/probe_spec.rb
++++ b/spec/celluloid/probe_spec.rb
+@@ -38,7 +38,7 @@
+ 
+ describe "Probe", actor_system: :global do
+   describe 'on boot' do
+-    it 'should capture system actor spawn' do
++    xit 'should capture system actor spawn' do
+       client = TestProbeClient.new
+       Celluloid::Probe.run
+       create_events = []

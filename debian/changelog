@@ -1,0 +1,83 @@
+ruby-celluloid (0.16.0-5) unstable; urgency=medium
+
+  * Team upload
+  * Workaround Fixnum->Integer change (Closes: #892192)
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.1.3 (no changes needed)
+  * Use salsa.debian.org in Vcs-* fields
+  * Use https in watch file
+  * Add gem2deb to build dependencies
+
+  [ Cédric Boutillier ]
+  * Set Testsuite to autopkgtest-pkg-ruby (Closes: #830070)
+  * Fix typo in remove-rubygems-bundler-coveralls.patch's description
+  * Open log file in specs in a temporary directory (fixes autopkgtests)
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Fri, 23 Mar 2018 22:24:53 +0300
+
+ruby-celluloid (0.16.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Check gemspec dependencies during build
+  * Relax gemspec dependency on timers (Closes: #811217)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 20 Jan 2016 01:27:27 +0530
+
+ruby-celluloid (0.16.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch with backported upstream commits for RSpec3 compatibility
+
+ -- Hleb Valoshka <375gnu@gmail.com>  Fri, 26 Jun 2015 17:18:50 +0300
+
+ruby-celluloid (0.16.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Add deactivate_probe_spec_issue.patch to disable a randomly failing test
+    (Closes: #786669)
+  * Bump Standards-Version to 3.9.6 (no changes needed)
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 04 Jun 2015 13:16:21 +0200
+
+ruby-celluloid (0.16.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Drop fix_relative_path_rspec.patch (merged upstream)
+  * Tighten ruby-timers dependency to >= 4.0.0
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 19 May 2015 13:41:10 +0530
+
+ruby-celluloid (0.15.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * No changes rebuild to add rubygems-integration support for all
+    interpreters.
+
+ -- Antonio Terceiro <terceiro@debian.org>  Thu, 10 Apr 2014 22:56:03 -0300
+
+ruby-celluloid (0.15.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 0.15.2
+  * Bump Standards-Version to 3.9.5 (no changes needed)
+  * Refresh patches
+  * Install README.md; do not install CHANGES.md, missing from this upstream
+    version
+  * Create a log/ dir for the tests and remove it afterwards
+
+ -- Cédric Boutillier <boutil@debian.org>  Fri, 24 Jan 2014 00:41:07 +0100
+
+ruby-celluloid (0.14.0-2) unstable; urgency=low
+
+  * Team upload
+  * install files from spec/support in $vendorlib/celluloid/support/
+  * add fix_relative_path_rspec.patch to fix paths in celluloid/rspec.rb
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 23 Jan 2014 23:03:39 +0100
+
+ruby-celluloid (0.14.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #708709)
+
+ -- Praveen Arimbrathodiyil <praveen@debian.org>  Sat, 18 May 2013 02:56:59 +0530

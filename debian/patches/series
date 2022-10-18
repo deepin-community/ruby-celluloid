@@ -1,0 +1,6 @@
+remove-rubygems-bundler-coveralls.patch
+deactivate_probe_spec_issue.patch
+0003-Backport-upstream-commits-to-make-it-RSpec3-compatib.patch
+0004-relax-timers.patch
+0005-Workaround-Fixnum-Integer-change.patch
+0006-relocate-log-specs.patch
